@@ -48,6 +48,7 @@ namespace SwaggerApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "TinRoll API V1");
+                c.RoutePrefix = "uselesslongpathtodemoconfigsetting";
             });
 
             app.UseRouting();
