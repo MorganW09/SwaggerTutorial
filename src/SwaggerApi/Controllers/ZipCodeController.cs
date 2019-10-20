@@ -20,6 +20,9 @@ namespace SwaggerApi.Controllers
 
         // GET: api/ZipCode/5
         [HttpGet("{id}", Name = "Get")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Error), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Error), StatusCodes.Status500InternalServerError)]
         public string Get(int id)
         {
             return "value";
